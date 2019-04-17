@@ -2,7 +2,7 @@ class ProjectIdeasController < ApplicationController
 
 # get project_ideas/new to render a form to create a new idea
   get '/project_ideas/new' do
-    erb :
+    erb :'/project_ideas/new'
   end
 
 
