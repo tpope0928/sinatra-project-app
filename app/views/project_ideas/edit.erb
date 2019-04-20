@@ -1,0 +1,12 @@
+EDIT PAGE FOR A Project Idea
+
+<form class="" action="/project_ideas/<%= @project_entry.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="title">Title:</label>
+  <input type="text" name="title" value ="<%= @project_entry.title %>">
+  <label for="content">Content:</label>
+  <textarea name="content" style="width:auto; height:auto;"><%= @project_entry.content %></textarea>
+  <label for="mood">Mood:</label>
+  <input type="text" name="mood" value ="<%= @project_entry.mood %>">
+  <input type="submit" name="" value="Edit Entry">
+</form>

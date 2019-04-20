@@ -8,5 +8,5 @@ use Rack::MethodOverride
 
 
 use UsersController
-ProjectIdeasController
+use ProjectIdeasController
 run ApplicationController
