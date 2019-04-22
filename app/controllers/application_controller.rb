@@ -26,8 +26,8 @@ class ApplicationController < Sinatra::Base
       @current_user ||= User.find_by(id: session[:user_id])
     end
 
-    def authorized_to_edit?(project_idea)
-      project_idea.user == current_user
+    def authorized_to_edit?(project_entry)
+      project_entry.user == current_user
     end
 
     # use this helper method to protect controller actions where user must be logged in to proceed

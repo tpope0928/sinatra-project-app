@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
-    <title>SinatraProjectIdeasApp</title>
+    <title>SinatraJournalApp</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,8 +17,8 @@
     <div class="nav">
       <% if logged_in? %>
         <a href="/logout">Logout</a>
-        <a href="/project_ideas">All Project Idea Entries</a>
-        <a href="/project_ideas/new">New Entry</a>
+        <a href="/project_ideas">All Project Ideas</a>
+        <a href="/project_ideas/new">New Idea</a>
       <% end %>
     </div>
     <div class="wrapper">
@@ -32,7 +32,7 @@
         <%= yield %>
 
       <footer class="branding">
-        <small>&copy; 2018 <strong>SinatraJournalApp</strong></small>
+        <small>&copy; 2018 <strong>SinatraIdeasApp</strong></small>
       </footer>
     </div>
 

@@ -1,6 +1,7 @@
+
+
 <h3><%= @project_entry.title %></h3>
 <p><%= @project_entry.content %></p>
-<p>Mood: <%= @project_entry.mood %></p>
 
 <p>Created by: <%= @project_entry.user.name %></p>
 
@@ -13,6 +14,6 @@
   <form class="" action="/project_ideas/<%= @project_entry.id %>" method="post">
     <!-- How do I turn this form submission into a DELETE request??? -->
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" name="" value="Delete this Entry">
+    <input type="submit" name="" value="Delete this Idea">
   </form>
 <% end %>

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   post '/login' do
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id # actually logging the user in
+      session[:user_id] = @user.id
       flash[:message] = "Welcome, #{@user.name}!"
       redirect "users/#{@user.id}"
     else
@@ -24,11 +24,14 @@ class UsersController < ApplicationController
 
   post '/users' do
     @user = User.new(params)
+
     if @user.save
       session[:user_id] = @user.id # actually logging the user in
+
       flash[:message] = "You have successfully created an account, #{@user.name}! Welcome!"
       redirect "/users/#{@user.id}"
     else
+
       flash[:errors] = "Account creation failure: #{@user.errors.full_messages.to_sentence}"
       redirect '/signup'
     end
