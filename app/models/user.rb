@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :email, uniqueness: true
 
-  has_many :journal_entries
+  has_many :project_ideas
 
 end
