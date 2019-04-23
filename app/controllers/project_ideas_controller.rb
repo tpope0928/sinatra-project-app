@@ -14,7 +14,7 @@ class ProjectIdeasController < ApplicationController
     redirect_if_not_logged_in
     if params[:content] != ""
       # create a new entry
-      @project_entry = ProjectIdea.create(content: params[:content], user_id: current_user.id, title: params[:title])
+      @project_entry = ProjectIdea.create(content: params[:content], user_id: current_user.id, title: params[:title], mood: params[:mood])
       flash[:message] = "Project Idea successfully created." if @project_entry.id
       redirect "/project_ideas/#{@project_entry.id}"
     else
